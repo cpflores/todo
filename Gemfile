@@ -23,3 +23,7 @@ group :test do
   gem 'capybara', '~> 2.1.0'
   gem 'shoulda-matchers', '~> 2.6.1'
 end
+
+group :production do
+	gem 'pg'
+end
