@@ -1,11 +1,11 @@
 class TodoItemsController < ApplicationController
   before_action :find_todo_list
   
-  def index 	
+  def index   
   end
 
   def new
-  	@todo_item = @todo_list.todo_items.new
+    @todo_item = @todo_list.todo_items.new
   end
 
   def create
