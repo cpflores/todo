@@ -87,10 +87,10 @@ describe PasswordResetsController do
 			before { user.generate_password_reset_token! }
 
 			it "updates the user's password" do
-				expect {
-					patch :update, id: user.password_reset_token, user: { password: 'newpassword1', password_confirmation: 'newpassword1' }
-					user.reload
-				}.to change(user, :password_digest)
+				digest = user.password_digest
+				patch :update, id: user.password_reset_token, user: { password: 'newpassword1', password_confirmation: 'newpassword1' }
+				user.reload
+				expect(user.password_digest).to_not eq(digest)
 			end
 		end
 	end
