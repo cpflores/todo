@@ -22,4 +22,13 @@ class PasswordResetsController < ApplicationController
 			render file: 'public/404.html', status: :not_found
 		end
 	end
+
+	def update
+		@user = User.find_by(password_reset_token: params[:id])
+		if @user
+		else
+			flash.now[:notice] = "Password reset token not found."
+			render action: 'edit' 
+		end
+	end
 end

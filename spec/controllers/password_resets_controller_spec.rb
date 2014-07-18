@@ -68,4 +68,30 @@ describe PasswordResetsController do
 			end
 		end
 	end
+
+	describe "PATCH update" do
+		context "with no token found" do
+			it "renders the edit page" do
+				patch :update, id: 'notfound', user: { password: 'newpassword1', password_confirmation: 'newpassword1' }
+				expect(response).to render_template('edit')
+			end
+
+			it "sets the flash message" do
+				patch :update, id: 'notfound', user: { password: 'newpassword1', password_confirmation: 'newpassword1' }
+				expect(flash[:notice]).to match(/not found/)
+			end
+		end
+
+		context "with a valid token" do
+			let(:user) { create(:user) }
+			before { user.generate_password_reset_token! }
+
+			it "updates the user's password" do
+				expect {
+					patch :update, id: user.password_reset_token, user: { password: 'newpassword1', password_confirmation: 'newpassword1' }
+					user.reload
+				}.to change(user, :password_digest)
+			end
+		end
+	end
 end
