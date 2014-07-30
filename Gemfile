@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'foundation-rails', '~> 5.3.1.0'
+# gem 'font-awesome-sass'
 
 group :development do
 	gem 'spring'
