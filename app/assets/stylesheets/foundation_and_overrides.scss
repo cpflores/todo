@@ -46,8 +46,8 @@
 	 $body-bg: #ecf0f1;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$font-weight-normal:normal;
-$body-font-weight: $font-weight-normal;
+// $font-weight-normal:normal;
+// $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -673,7 +673,7 @@ $body-font-weight: $font-weight-normal;
 // $include-html-magellan-classes: $include-html-classes;
 
 // $magellan-bg: #fff;
-$magellan-padding: 0 !important;
+// $magellan-padding: 0 !important;
 
 // Off-canvas
 
@@ -1040,12 +1040,12 @@ $sub-nav-padding: rem-calc(3 16);
 
 
 // We use these to control the active item styles
-$sub-nav-active-font-weight: $font-weight-normal;
-$sub-nav-active-bg: $primary-color;
-$sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
-$sub-nav-active-color: #fff;
-$sub-nav-active-padding: $sub-nav-padding;
-$sub-nav-active-cursor: default;
+// $sub-nav-active-font-weight: $font-weight-normal;
+// $sub-nav-active-bg: $primary-color;
+// $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
+// $sub-nav-active-color: #fff;
+// $sub-nav-active-padding: $sub-nav-padding;
+// $sub-nav-active-cursor: default;
 
 // $sub-nav-item-divider: "";
 // $sub-nav-item-divider-margin: rem-calc(12);
