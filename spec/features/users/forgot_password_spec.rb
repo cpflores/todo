@@ -27,7 +27,7 @@ describe "Forgotten passwords" do
 		expect(page).to have_content("Password updated")
 		expect(page.current_path).to eq(todo_lists_path)
 		
-		click_link "Sign Out"
+		click_link "Log Out"
 		expect(page).to have_content("You must be logged in to access that page")
 		visit login_path
 		fill_in "Email", with: user.email
